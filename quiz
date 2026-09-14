@@ -23,9 +23,100 @@ margin: 70px;
   justify-content: center;
   color: rgb(36, 36, 36);
 }
+button {
+    background-color: whitesmoke;
+      border: 1px solid; 
+      font-family:verdana;
+      color:#044a05;
+      text-align: center;
+}
+div {
+  height: 70px;
+  font-family:Segoe UI;
+  text-align:center;
+  align-items:center;
+  justify-content: center;
+  color: rgb(241, 235, 235);
+}
 </style>
+<form action="inicio.html" method="GET">
+       <p>
+        <button type="submit">Volver al inicio...</button>
+    </form>
+</button>
 <body>
-<h1>BIENVENID@ AL QUIZ</h1>
+
+        <div class="question">
+            <p>1. Tienes una lista de pendientes, ¿cómo los haces?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A" required> Me organizo con tiempo para hacerlo.</label>
+                <label><input type="radio" name="q1" value="B"> Hago todo a última hora.</label>
+                <label><input type="radio" name="q1" value="C"> Me preocupo sólo de lo urgente. </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. ¿Té o café? </p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A" required> Té.</label>
+                <label><input type="radio" name="q2" value="B"> Café.</label>
+                 <label><input type="radio" name="q2" value="C"> Ninguna, prefiero otra.</label>
+            </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. Tienes el día libre, ¿qué prefieres hacer?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A" required> Me quedo en casa leyendo o viendo una película.</label>
+                <label><input type="radio" name="q3" value="B"> Salgo a divertirme con amigos.</label>
+                 <label><input type="radio" name="q3" value="C"> Organizo el resto de mi semana.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. ¿Cómo harías que te presten atención? </p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A" required> Gritando</label>
+                <label><input type="radio" name="q2" value="B"> Guardando silencio.</label>
+                 <label><input type="radio" name="q2" value="C"> No necesito hacerlo.</label>
+            </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>5. Te piden resolver un problema matemático, ¿qué haces? </p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A" required> Me rindo de inmediato.</label>
+                <label><input type="radio" name="q2" value="B"> Intento resolverlo.</label>
+                 <label><input type="radio" name="q2" value="C"> Le pido a alguien que lo haga por mí.</label>
+            </div>
+            </div>
+        </div>  
+        
+        <div class="question">
+            <p>6. ¿Con cúal de las siguientes palabras te definirías? </p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A" required> Eficiente y organizad@.</label>
+                <label><input type="radio" name="q2" value="B"> Dispers@ y alocad@.</label>
+                 <label><input type="radio" name="q2" value="C"> Calmad@ y paciente.</label>
+            </div>
+            </div>
+        </div>  
+
+       <div class="question">
+            <p>6. Alguien cuenta un chiste medio picante que encontraste fome, ¿qué haces? </p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A" required> Me incomodo y digo que es inapropiado.</label>
+                <label><input type="radio" name="q2" value="B"> Me río.</label>
+                 <label><input type="radio" name="q2" value="C"> Yo conté el chiste.</label>
+            </div>
+            </div>
+        <button type="button" onclick="calcularResultado()">Ver Resultado</button>
+    </form>
+
+    <div id="result"></div>
+</div>
 </body>
 </head>
 </html>
