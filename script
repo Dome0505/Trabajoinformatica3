@@ -1,0 +1,36 @@
+      function mostrarSeleccion() {
+            // Busca el radio button que esté marcado (:checked) dentro del grupo 'metodoPago'
+            const opcionSeleccionadaQ1 = document.querySelector('input[name="q1"]:checked');
+            const opcionSeleccionadaQ2 = document.querySelector('input[name="q2"]:checked');
+            const opcionSeleccionadaQ3 = document.querySelector('input[name="q3"]:checked');
+            const opcionSeleccionadaQ4 = document.querySelector('input[name="q4"]:checked');
+            const opcionSeleccionadaQ5 = document.querySelector('input[name="q5"]:checked');
+            const opcionSeleccionadaQ4 = document.querySelector('input[name="q6"]:checked');
+            const opcionSeleccionadaQ5 = document.querySelector('input[name="q7"]:checked');
+
+            // Verifica si se encontró alguna opción seleccionada
+            if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'A') {
+                document.getElementById("resultadoq1").innerText = "Eres Carlos Altamirano";
+            } 
+
+
+           if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'B') {
+                document.getElementById("resultadoq2").innerText = "Eres Javiera Diaz ";
+            } 
+
+            if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'B') {
+                document.getElementById("resultadoq2").innerText = "Eres Marco Maione ";
+            } 
+
+            if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'B') {
+                document.getElementById("resultadoq2").innerText = "Eres Ornella Giua";
+            } 
+
+            if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'B') {
+                document.getElementById("resultadoq2").innerText = "Eres Valentina Ansaldi";
+            } 
+
+            if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'B') {
+                document.getElementById("resultadoq2").innerText = "Eres Vanessa Boccardo";
+            } 
+        }
