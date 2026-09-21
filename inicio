@@ -16,9 +16,16 @@ h2 {
   height: 70px;
 
 }
+h3 {
+  margin: 70px;
+  border: 1px solid rgb(10, 10, 44);
+  background-color: rgb(10, 10, 44);
+  height: 70px;
+
+}
 body {
   background-color: rgb(16, 39, 47);
-  background-image: url('img/Frutiger Aero Desktop Wallpaper - Background.jpg');
+  background-image: url('img/fondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -38,7 +45,12 @@ h2{
   font-family: Lucida Sans;
   line-height:70px;
 }
-
+h3{
+  color: rgb(210, 210, 223);
+  text-align: center;
+  font-family: Lucida Sans;
+  line-height:70px;
+}
 p {
   font-family: lucida sans;
   color: rgb(10, 10, 44);
@@ -48,20 +60,10 @@ p {
   border: 1px solid rgba(73, 75, 173, 0.1);
   background-color: whitesmoke;
   height: 100px;
-    line-height:100px; 
+    line-height:50px; 
 
 }
-p {
-   font-family: lucida sans;
-  color:rgb(10, 10, 44);
-  font-size: 15px;
-  text-align: center;
-  margin: 100px;
-  border: 1px solid rgba(73, 75, 173, 0.1);
-  background-color: whitesmoke;
-  height: 100px;
-    line-height:100px; 
-}
+
 
 label {
     font-family: lucida sans;
@@ -85,42 +87,28 @@ button {
       font-family:verdana;
       color:#044a05;
       text-align: center;
-}
-button {
-    background-color:whitesmoke;
-      border: 1px solid rgba(73, 75, 173, 0.1);
-      font-family: verdana;
-      color:#044a05;
-       text-align: center;
+      line-height: 50px;
+      height:50px;
 }
 </style>
 </head>
 <body>
 
 <h1>QUEPROFESOY</h1>
-<p>¿Alguna vez has pensado en qué profesor de tu colegio eres?</p>
-<p>Si sí lo has pensado, pero estás inciert@, ¿te gustaría hacer un cuestionario para saberlo?</p>
-
-
+<p>¿Alguna vez has pensado en qué profesor de tu colegio eres? <br>Si sí lo has pensado, pero estás inciert@...</br>
 <head>
     <meta charset="UTF-8">
     <title>quiz</title>
 </head>
-<body>
-
-    <form action="quiz.html" method="GET">
+  <form action="quiz.html" method="GET">
         <h2>Tenemos el instrumento perfecto para tí</h2>
         <p>Únete a QUEPROFESOY, plataforma creada por alumnos para alumnos. ¡Anímate a conocer tu yo profesor!
         <br> <button type="submit">¡Vamos!</button></p><br>
     </form>
  <form action="#" method="POST">
-       <p>
         <button type="submit">Mejor luego...</button>
     </form>
-
-    <label>
-    
-        </label>
-    </p>
-</body>
+</p>
+  <h3>QUIENES SOMOS</h3>
+  
 </html>
