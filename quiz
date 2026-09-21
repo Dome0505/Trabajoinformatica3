@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head <link rel="stylesheet" href="style.css">
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"> </script>
+</head> 
 <style>
     body {
   background-color: rgb(16, 39, 47);
@@ -39,7 +42,7 @@ div {
   color: rgb(241, 235, 235);
 }
 </style>
-<form action="inicio.html" method="GET">
+<form action="index.html" method="GET">
        <p>
         <button type="submit">Volver al inicio...</button>
     </form>
@@ -108,8 +111,23 @@ div {
             </div>
         <button style= justify-content:center;font-family:Arial;background-color:#0e0e4f;color:#bbbbe9; type="button" onclick;="Resultado">Ver Resultado</button>
     </form>
+        <button onclick="mostrarSeleccion();">Ver resultado</button>
+        <p id="resultadoq1"></p>
+        <p id="resultadoq2"></p>
+        <p id="resultadoq3"></p>
+        <p id="resultadoq4"></p>
+        <p id="resultadoq5"></p>
+        <p id="resultadoq6"></p>
+        <p id="resultadoq7"></p>
 
-    <div id="result"></div>
+CBCABAB CARLOS
+BAACABB o BABCABB CHAVI
+ACCACAA ANSALDI
+CBACACB MARCO
+CCAACCC CLAUDIO
+
+
+    </div>
 </div>
 </body>
 </head>
