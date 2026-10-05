@@ -1,36 +1,162 @@
-      function mostrarSeleccion() {
-            // Busca el radio button que esté marcado (:checked) dentro del grupo 'metodoPago'
-            const opcionSeleccionadaQ1 = document.querySelector('input[name="q1"]:checked');
-            const opcionSeleccionadaQ2 = document.querySelector('input[name="q2"]:checked');
-            const opcionSeleccionadaQ3 = document.querySelector('input[name="q3"]:checked');
-            const opcionSeleccionadaQ4 = document.querySelector('input[name="q4"]:checked');
-            const opcionSeleccionadaQ5 = document.querySelector('input[name="q5"]:checked');
-            const opcionSeleccionadaQ4 = document.querySelector('input[name="q6"]:checked');
-            const opcionSeleccionadaQ5 = document.querySelector('input[name="q7"]:checked');
+// 1. Definición de Preguntas y Puntos por Opción
+const questions = [
+    {
+        question: "1. ¿Cómo prefieres pasar un día libre?",
+        options: [
+            { text: "Leyendo un libro o aprendiendo algo nuevo a solas.", pts: 1 },
+            { text: "Organizando mis pendientes de la semana", pts: 2 },
+            { text: "Saliendo con amig@s", pts: 3 }
+        ]
+    },
+    {
+        question: "2. Si surge un problema inesperado, tú...",
+        options: [
+            { text: "Mantengo la calma y busco una solución", pts: 1 },
+            { text: "Me estreso, pero intento buscar una solución", pts: 2 },
+            { text: "Me dejo llevar por la intuición y busco una solución única", pts: 3 }
+        ]
+    },
+    {
+        question: "3. ¿Qué cualidad valoras más en ti mismo?",
+        options: [
+            { text: "Mi inteligencia, curiosidad y capacidad de conocer.", pts: 1 },
+            { text: "Mi empatía, amabilidad y capacidad de dar consejos.", pts: 2 },
+            { text: "Mi liderazgo, mi organización y mi capacidad de análisis", pts: 3 }
+        ]
+    },
+    {
+        question: "4. En un grupo de trabajo, tú sueles ser...",
+        options: [
+            { text: "Quien observa en silencio y aporta ideas brillantes.", pts: 1 },
+            { text: "Quien coordina los tiempos y asegura que todo salga bien.", pts: 2 },
+            { text: "Quien toma las decisiones finales y motiva al grupo", pts: 3 }
+        ]
+    },
+    {
+        question: "5. ¿Cómo reaccionas ante los cambios drásticos?",
+        options: [
+            { text: "Los analizo para enfrentarlos detenidamente.", pts: 1 },
+            { text: "Me agobian, prefiero la rutina y la estabilidad.", pts: 2 },
+            { text: "Me emocionan, me encanta experimentar cosas nuevas.", pts: 3 }
+        ]
+    },
+    {
+        question: "6. Té o Café?",
+        options: [
+            { text: "Café", pts: 1 },
+            { text: "Té", pts: 2 },
+            { text: "Ninguno, prefiero otra cosa", pts: 3 }
+        ]
+    },
+    {
+        question: "7. ¿Cómo harías que te presten atención",
+        options: [
+            { text: "Alzando la voz.", pts: 1 },
+            { text: "Guardando silencio.", pts: 2 },
+            { text: "No necesito hacerlo.", pts: 4 }
+        ]
+    }
+];
 
-            // Verifica si se encontró alguna opción seleccionada
-            if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'A') {
-                document.getElementById("resultadoq1").innerText = "Eres Carlos Altamirano";
-            } 
+// 2. Definición de los 6 Resultados de Personalidad (Rangos basados en sumatoria de puntos)
+const personalities = [
+    { title: "Carolina Pizarro", desc: "Eres una persona estructurada, profundamente lógica y curiosa. Prefieres entender el porqué de las cosas antes de actuar y disfrutas mucho de tu propio espacio." },
+    { title: "Marco Maione", desc: "Destacas por tu gran corazón, amabilidad y sensibilidad. Siempre buscas el bienestar de quienes te rodean, prefiriendo la armonía sobre el conflicto." },
+    { title: "Valentina Ansaldi", desc: "Eres el pilar de la responsabilidad. Te gustan el orden, las reglas claras y la estabilidad. Eres esa persona en quien todos confían porque nunca dejas un cabo suelto." },
+    { title: "Javiera Díaz", desc: "Vives la vida con pasión, espontaneidad y un toque de aventura. Te aburre la rutina pesada y siempre estás buscando nuevas experiencias o personas que conocer." },
+    { title: "Carlos Altamirano", desc: "Tienes una fuerte determinación, seguridad en ti mismo y una gran visión orientada al éxito. No te asusta tomar las riendas ni tomar decisiones difíciles." },
+    { title: "Ornella Giua", desc: "Tu mente es un universo de originalidad. Combinas una gran intuición con una enorme creatividad. Rompes los moldes establecidos y ves el mundo de forma única." },
+];
 
+// 3. Variables de Control de Estado
+let currentQuestionIndex = 0;
+let totalScore = 0;
 
-           if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'B') {
-                document.getElementById("resultadoq2").innerText = "Eres Javiera Diaz ";
-            } 
+// 4. Elementos del DOM
+const startScreen = document.getElementById("start-screen");
+const quizScreen = document.getElementById("quiz-screen");
+const resultScreen = document.getElementById("result-screen");
 
-            if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'B') {
-                document.getElementById("resultadoq2").innerText = "Eres Marco Maione ";
-            } 
+const startBtn = document.getElementById("start-btn");
+const restartBtn = document.getElementById("restart-btn");
 
-            if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'B') {
-                document.getElementById("resultadoq2").innerText = "Eres Ornella Giua";
-            } 
+const questionText = document.getElementById("question-text");
+const optionsContainer = document.getElementById("options-container");
+const progressBar = document.getElementById("progress");
 
-            if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'B') {
-                document.getElementById("resultadoq2").innerText = "Eres Valentina Ansaldi";
-            } 
+const resultTitle = document.getElementById("result-title");
+const resultDesc = document.getElementById("result-desc");
 
-            if (opcionSeleccionadaQ1.value =='A' && opcionSeleccionadaQ2.value== 'B') {
-                document.getElementById("resultadoq2").innerText = "Eres Vanessa Boccardo";
-            } 
-        }
+// 5. Event Listeners de Flujo principal
+startBtn.addEventListener("click", () => {
+    startScreen.classList.add("hidden");
+    quizScreen.classList.remove("hidden");
+    loadQuestion();
+});
+
+restartBtn.addEventListener("click", () => {
+    resultScreen.classList.add("hidden");
+    startScreen.classList.remove("remove"); // O reset directo al quiz
+    currentQuestionIndex = 0;
+    totalScore = 0;
+    quizScreen.classList.remove("hidden");
+    loadQuestion();
+});
+
+// 6. Funciones de Lógica
+function loadQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionText.innerText = currentQuestion.question;
+    optionsContainer.innerHTML = "";
+    
+    // Actualizar barra de progreso
+    const progressPercent = (currentQuestionIndex / questions.length) * 100;
+    progressBar.style.width = `${progressPercent}%`;
+
+    // Renderizar botones de opción de respuesta
+    currentQuestion.options.forEach(option => {
+        const button = document.createElement("button");
+        button.innerText = option.text;
+        button.addEventListener("click", () => selectOption(option.pts));
+        optionsContainer.appendChild(button);
+    });
+}
+
+function selectOption(pts) {
+    totalScore += pts;
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
+}
+
+function showResult() {
+    quizScreen.classList.add("hidden");
+    resultScreen.classList.remove("hidden");
+    progressBar.style.width = "100%";
+
+    // El puntaje mínimo posible es 9 (todo opciones de menor puntaje) 
+    // El puntaje máximo posible es 41 (todo opciones de mayor puntaje)
+    // Dividimos el rango de manera matemática para asignar uno de los 6 tipos.
+    let selectedPersonality;
+
+    if (totalScore >= 7 && totalScore <=9) {
+        selectedPersonality = personalities[4]; // Carlos
+    } else if (totalScore <= 11) {
+        selectedPersonality = personalities[2]; // Vale
+    } else if (totalScore <= 14) {
+        selectedPersonality = personalities[0]; // Marco
+    } else if (totalScore <= 15) {
+        selectedPersonality = personalities[1]; // Caro
+    } else if (totalScore <= 16) {
+        selectedPersonality = personalities[3]; // Chavi
+    } else {
+        selectedPersonality = personalities[5]; // Orne
+    }
+
+    resultTitle.innerText = selectedPersonality.title;
+    resultDesc.innerText = selectedPersonality.desc;
+}
