@@ -1,136 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<link rel="stylesheet" href="style.css">
-<script src="script.js"> </script>
-</head> 
-<style>
-    body {
-  background-color: rgb(16, 39, 47);
-  background-image: url('img/pizarra.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-    margin: 0;
-}
-h1 {
-margin: 70px;
-  border: 1px solid rgb(252, 252, 255);
-  background-color: rgb(243, 243, 245);
-  height: 70px;
-  font-family:Segoe UI;
-  text-align:center;
-  align-items:center;
-  justify-content: center;
-  color: rgb(36, 36, 36);
-}
-button {
-    background-color: whitesmoke;
-      border: 1px solid; 
-      font-family:verdana;
-      color:#044a05;
-      text-align: center;
-}
-div {
-  height: 70px;
-  font-family:Segoe UI;
-  text-align:center;
-  align-items:center;
-  justify-content: center;
-  color: rgb(241, 235, 235);
-}
-</style>
-<form action="index.html" method="GET">
-       <p>
-        <button type="submit">Volver al inicio...</button>
-    </form>
-</button>
-<body>
-        <div class="question">
-            <p>1. Tienes una lista de pendientes, ¿cómo los haces?</p>
-            <div class="options"; style=color:red;font-family:cambria;>
-                <label><input type="radio" name="q1" value="A" required> Me organizo con tiempo para hacerlo.</label>
-                <label><input type="radio" name="q1" value="B" required> Hago todo a última hora.</label>
-                <label><input type="radio" name="q1" value="C" required> Me preocupo sólo de lo urgente. </label>
-            </div>
-        </div>
-
-        <div class="question">
-            <p>2. ¿Té o café? </p>
-            <div class="options"; style=color:red;font-family:cambria;>
-                <label><input type="radio" name="q2" value="A" required> Té.</label>
-                <label><input type="radio" name="q2" value="B" required> Café.</label>
-                <label><input type="radio" name="q2" value="C" required> Ninguna, prefiero otra.</label>
-            </div>
-        </div>
-
-        <div class="question">
-            <p>3. Tienes el día libre, ¿qué prefieres hacer?</p>
-            <div class="options"; style=color:red;font-family:cambria;>
-                <label><input type="radio" name="q3" value="A" required> Me quedo en casa leyendo o viendo una película.</label>
-                <label><input type="radio" name="q3" value="B" required> Salgo a divertirme con amigos.</label>
-                <label><input type="radio" name="q3" value="C" required> Organizo el resto de mi semana.</label>
-            </div>
-        </div>
-
-        <div class="question">
-            <p>4. ¿Cómo harías que te presten atención? </p>
-            <div class="options"; style=color:red;font-family:cambria;>
-                <label><input type="radio" name="q4" value="A" required> Gritando</label>
-                <label><input type="radio" name="q4" value="B" required> Guardando silencio.</label>
-                <label><input type="radio" name="q4" value="C" required> No necesito hacerlo.</label>
-            </div>
-        </div>
-
-        <div class="question">
-            <p>5. Te piden resolver un problema matemático, ¿qué haces? </p>
-            <div class="options"; style=color:red;font-family:cambria;>
-                <label><input type="radio" name="q5" value="A" required> Me rindo de inmediato.</label>
-                <label><input type="radio" name="q5" value="B" required> Intento resolverlo.</label>
-                <label><input type="radio" name="q5" value="C" required> Le pido a alguien que lo haga por mí.</label>
-            </div>
-        </div>  
-        
-        <div class="question">
-            <p>6. ¿Con cúales de las siguientes palabras te definirías? </p>
-            <div class="options"; style=color:red;font-family:cambria;>
-                <label><input type="radio" name="q6" value="A" required> Eficiente y organizad@.</label>
-                <label><input type="radio" name="q6" value="B"required> Dispers@ y alocad@.</label>
-                <label><input type="radio" name="q6" value="C"required> Calmad@ y paciente.</label>
-            </div>
-        </div>  
-
-       <div class="question">
-            <p>7. Alguien cuenta un chiste medio picante (en una situación no formal), ¿qué haces? </p>
-            <div class="options"; style=color:red;font-family:cambria;>
-                <label><input type="radio" name="q7" value="A" required> Me incomodo y digo que es inapropiado.</label>
-                <label><input type="radio" name="q7" value="B"required> Me río.</label>
-                <label><input type="radio" name="q7" value="C"required> Yo conté el chiste.</label>
-            </div>
-        <button style= justify-content:center;font-family:Arial;background-color:#0e0e4f;color:#bbbbe9; type="button" onclick;="Resultado">Ver Resultado</button>
-    </form>
-        <button onclick="mostrarSeleccion();">Ver resultado</button>
-        <p id="resultadoq1"></p>
-        <p id="resultadoq2"></p>
-        <p id="resultadoq3"></p>
-        <p id="resultadoq4"></p>
-        <p id="resultadoq5"></p>
-        <p id="resultadoq6"></p>
-        <p id="resultadoq7"></p>
-
-C,A,B,A,A,B,A Carlos
-A,B,C,B,C,A,B Caro
-B,A,A,B,A,C,A Vale
-A,C,B,A,B,B,C Marco
-C,B,B,C,B,B,B Chavi
-C,C,C,C,C,A,C Orne
-
-    </div>
-</div>
-</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interactivo</title>
+    <style>
+        body { font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; background-color: #bffdae; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .quiz-container { background-color: #a6e873; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 600px; width: 100%; padding: 30px; box-sizing: border-box; }
+        h2 { margin-top: 0; color: #2c3e50; }
+        .progress-bar { height: 6px; background-color: #e0e0e0; border-radius: 3px; margin-bottom: 25px; overflow: hidden; }
+        .progress { height: 100%; background-color: #125e17; width: 14.28%; transition: width 0.3s ease; }
+        .options-list { list-style: none; padding: 0; }
+        .option-btn { display: block; width: 100%; background-color: #f8f9fa; border: 2px solid #e9ecef; border-radius: 6px; padding: 15px; margin-bottom: 12px; text-align: left; font-size: 16px; cursor: pointer; transition: all 0.2s ease; }
+        .option-btn:hover { background-color: #e8f4fd; border-color: #3d8331; color: #3d8331; }
+        .result-card { text-align: center; display: none; }
+        .result-title { font-size: 28px; font-weight: bold; color: #2e4053; margin-bottom: 15px; letter-spacing: 1px; }
+        .restart-btn { background-color: #3d8331; color: white; border: none; padding: 12px 25px; font-size: 16px; border-radius: 5px; cursor: pointer; margin-top: 20px; }
+        .restart-btn:hover { background-color: #3d8331; }
+        .action-btn { background-color: #3498db; color: white; border: none; padding: 12px 25px; font-size: 16px; border-radius: 5px; cursor: pointer; margin-top: 20px; margin-right: 10px; font-family: 'Lucida Sans', sans-serif; text-decoration: none; display: inline-block; }
+        .action-btn:hover { background-color: #2980b9; }
+        .result-img { max-width: 100%; height: auto; border-radius: 6px; margin-bottom: 15px; max-height: 250px; object-fit: cover; }
+        .home-btn { background-color: #95a5a6; }
+        .home-btn:hover { background-color: #7f8c8d; }
+    </style>
 </head>
+<body>
+<div class="quiz-container">
+    <div id="quiz-screen">
+        <div class="progress-bar"><div class="progress" id="progress"></div></div>
+        <h2 id="question-text">Cargando pregunta...</h2>
+        <div class="options-list" id="options-container"></div>
+    </div>
+    <div id="result-screen" class="result-card">
+        <h2>¡Test Completado!</h2>
+        <div class="result-title" id="result-name">Tu Resultado</div>
+        <img id="result-image" class="result-img" src="" alt=""></img>
+        <p id="result-desc">Descripción del resultado.</p>
+        <button class="restart-btn" onclick="restartQuiz()">Repetir Quiz</button>
+       <a href="inicio.html" class="action-btn home-btn">Ir a Inicio</a>
+</div>
+<script>
+    const questions = [
+        { question: "¿Cómo prefieres pasar un día libre?", options: [ { text: "Leyendo un libro o aprendiendo algo nuevo a solas.", val: "A" }, { text: "Organizando mis pendientes de la semana", val: "B" }, { text: "Saliendo con amig@s", val: "C" } ] },
+        { question: "Si surge un problema inesperado tú...", options: [ { text: "Mantengo la calma y busco una solución", val: "A" }, { text: "Me estreso pero intento buscar una solución", val: "B" }, { text: "Me dejo llevar por la intuición y busco una solución única", val: "C" } ] },
+        { question: "¿Qué cualidad valoras más en ti mismo?", options: [ { text: "Mi curiosidad y capacidad de resolver problemas.", val: "A" }, { text: "Mi empatía, amabilidad y capacidad de dar consejos.", val: "B" }, { text: "Mi liderazgo, mi organización y mi capacidad de análisis", val: "C" } ] },
+        { question: "En un grupo de trabajo tú sueles ser...", options: [ { text: "Quien observa en silencio y aporta ideas brillantes.", val: "A" }, { text: "Quien coordina los tiempos y asegura que todo salga bien.", val: "B" }, { text: "Quien toma las decisiones finales y motiva al grupo", val: "C" } ] },
+        { question: "¿Cómo reaccionas ante los cambios drásticos?", options: [ { text: "Los analizo para enfrentarlos detenidamente.", val: "A" }, { text: "Me agobian, prefiero la rutina y la estabilidad.", val: "B" }, { text: "Me emocionan, me encanta experimentar cosas nuevas.", val: "C" } ] },
+        { question: "¿Té o Café?", options: [ { text: "Café", val: "A" }, { text: "Té", val: "B" }, { text: "Ninguno, prefiero otra cosa", val: "C" } ] },
+        { question: "¿Cómo harías que te presten atención?", options: [ { text: "Alzando la voz.", val: "A" }, { text: "Guardando silencio.", val: "B" }, { text: "No necesito hacerlo.", val: "C" } ] }
+    ];
+    const profileCombinations = { "CABABBA": "Carlos Altamirano", "BBABBAC" : "Carlos Altamirano" , "ABABABA" : "Carlos Altamirano" , "CBABBAC" : "Carlos Altamirano" , "BBABBAA" : "Carlos Altamirano"
+    ,"ABCBCAB": "Carolina Pizarro", "BBCBAAA": "Carolina Pizarro", "AAAAAAA" : "Carolina Pizarro" , "ACBBCAA" : "Carolina Pizarro" , "ABCBBAA" : "Carolina Pizarro" , "ACCCAA" : "Carolina Pizarro"
+    ,"BAABACA": "Valentina Ansaldi", "BAABACC": "Valentina Ansaldi", "BBCBBBB" : "Valentina Ansaldi" , "BBBAAAA" : "Valentina Ansaldi" , "BABAAAA" : "Valentina Ansaldi" , "BABBACA" : "Valentina Ansaldi"
+    ,"ACBABBC": "Marco Maione", "BABCBBC": "Marco Maione", "AABABBC": "Marco Maione", "ABCABCC" : "Marco Maione" , "ACCBBCC" : "Marco Maione" , "ABBCCCC" : "Marco Maione" , "ABCAAAC": "Marco Maione"
+    , "CBBCBBB": "Javiera Díaz", "BBBCBCA": "Javiera Díaz", "CBBCBBA": "Javiera Díaz", "BBBBBBA" : "Javiera Díaz" , "ACBCBCA" : "Javiera Díaz" , "ACCACCA" : "Javiera Díaz" , "AAACCCB" : "Javiera Díaz" , "BBBBBBB" : "Javiera Díaz" 
+    , "CCCCAAC": "Ornella Giua", "CBCCCAA": "Ornella Giua", "CCCCCAA": "Ornella Giua" , "CCCCCCC" : "Ornella Giua" , "CBCCCAA" : "Ornella Giua" , "BBCABAA" : "Ornella Giua" , "BBBCCCA" : "Ornella Giua"};
+    const resultsData = {
+        "Carlos Altamirano": { name: "Carlos Altamirano" , img: "img/img1.gif" , desc: "Tienes una fuerte determinación, seguridad en ti mismo y una gran visión orientada al éxito. No te asusta tomar las riendas ni tomar decisiones difíciles." },
+        "Carolina Pizarro": { name: "Carolina Pizarro", img: "img/img2.gif" , desc: "Eres una persona estructurada, profundamente lógica y curiosa. Prefieres entender el porqué de las cosas antes de actuar y disfrutas mucho de tu propio espacio." },
+        "Valentina Ansaldi": { name: "Valentina Ansaldi", img: "img/img3.gif" , desc: "Eres el pilar de la responsabilidad. Te gustan el orden, las reglas claras y la estabilidad. Eres esa persona en quien todos confían porque nunca dejas un cabo suelto." },
+        "Marco Maione": { name: "Marco Maione", img: "img/img4.gif" , desc: "Destacas por tu gran corazón, amabilidad y sensibilidad. Siempre buscas el bienestar de quienes te rodean, prefiriendo la armonía sobre el conflicto." },
+        "Javiera Díaz": { name: "Javiera Díaz", img: "img/img5.gif" , desc: "Vives la vida con pasión, espontaneidad y un toque de aventura. Te aburre la rutina pesada y siempre estás buscando nuevas experiencias o personas que conocer." },
+        "Ornella Giua": { name: "Ornella Giua", img: "img/img6.gif" , desc: "Tu mente es un universo de originalidad. Combinas una gran intuición con una enorme creatividad. Rompes los moldes establecidos y ves el mundo de forma única." }
+    };
+    let currentQuestionIndex = 0; let userAnswers = [];
+    const questionTextEl = document.getElementById("question-text"); const optionsContainerEl = document.getElementById("options-container"); const progressBarEl = document.getElementById("progress"); const quizScreenEl = document.getElementById("quiz-screen"); const resultScreenEl = document.getElementById("result-screen"); const resultNameEl = document.getElementById("result-name"); const resultDescEl = document.getElementById("result-desc");
+    function loadQuestion() {
+        if (currentQuestionIndex >= questions.length) { showResult(); return; }
+        const progressPercent = ((currentQuestionIndex + 1) / questions.length) * 100; progressBarEl.style.width = `${progressPercent}%`;
+        const currentQuestion = questions[currentQuestionIndex]; questionTextEl.textContent = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
+        optionsContainerEl.innerHTML = "";
+        currentQuestion.options.forEach(option => {
+            const button = document.createElement("button"); button.classList.add("option-btn"); button.textContent = option.text; button.onclick = () => selectOption(option.val); optionsContainerEl.appendChild(button);
+        });
+    }
+    function selectOption(letter) { userAnswers.push(letter); currentQuestionIndex++; loadQuestion(); }
+    function showResult() {
+        quizScreenEl.style.display = "none"; resultScreenEl.style.display = "block";
+        const combinationKey = userAnswers.join(""); let finalProfile = profileCombinations[combinationKey];
+        if (!finalProfile) { finalProfile = getDominantProfile(userAnswers); }
+        const resultInfo = resultsData[finalProfile]; resultNameEl.textContent = resultInfo.name; resultDescEl.textContent = resultInfo.desc;
+    }
+    function getDominantProfile(answers) {
+        const counts = { A: 0, B: 0, C: 0 }; answers.forEach(l => counts[l]++);
+        if (counts.A >= counts.B && counts.A >= counts.C) { return "Carolina Pizarro"; } else if (counts.B >= counts.A && counts.B >= counts.C) { return "Javiera Díaz"; } else { return "Ornella Giua"; }
+    }
+     function restartQuiz() { currentQuestionIndex = 0; userAnswers = []; resultScreenEl.style.display = "none"; quizScreenEl.style.display = "block"; loadQuestion(); }
+     function goMenu() {action="inicio.html" ; method="GET";}
+    loadQuestion();
+</script>
+</body>
 </html>
 </div>
 </body>
