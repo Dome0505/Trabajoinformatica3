@@ -120,14 +120,12 @@ div {
         <p id="resultadoq6"></p>
         <p id="resultadoq7"></p>
 
-CBCABAB CARLOS
-BAACABC o BABCABB CHAVI
-ACCACAA ANSALDI
-CBACACB MARCO
-CCAACCC CLAUDIO
-BBBAABB ORNE
-CBACABB VANE
-
+C,A,B,A,A,B,A Carlos
+A,B,C,B,C,A,B Caro
+B,A,A,B,A,C,A Vale
+A,C,B,A,B,B,C Marco
+C,B,B,C,B,B,B Chavi
+C,C,C,C,C,A,C Orne
 
     </div>
 </div>
